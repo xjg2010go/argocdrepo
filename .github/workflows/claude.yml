@@ -34,13 +34,13 @@ jobs:
         id: claude
         uses: anthropics/claude-code-action@beta
         with:
-          claude_code_oauth_token: ${{ secrets.CLAUDE_CODE_OAUTH_TOKEN }}
+          anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
           mcp_config: |
             {
               "mcpServers": {
                 "context7": {
                   "command": "npx",
-                  "args": ["-y", "@upstash/context7-mcp"],
+                  "args": ["-y", "@upstash/context7-mcp"]
                 }
               }
             }
